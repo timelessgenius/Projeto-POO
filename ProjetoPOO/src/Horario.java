@@ -7,8 +7,12 @@ public class Horario {
     private HashMap<Integer,String> diasDaSemana;
     
     public Horario(int horaInicio, int horaFim, int diaSemana) {
-        this.horaInicio = horaInicio;
-        this.horaFim = horaFim;
+       if(horaInicio < horaFim && (horaInicio >= 7 && horaInicio <= 24) && (horaFim >= 7 && horaFim <= 24)){
+           this.horaInicio = horaInicio;
+           this.horaFim = horaFim;
+        }else{
+           throw new HorarioInvalidoException("Horário inválido!");
+       }
         this.diaSemana = diaSemana;
         this.diasDaSemana = new HashMap<>();
     }
