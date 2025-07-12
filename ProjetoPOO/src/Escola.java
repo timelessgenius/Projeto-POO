@@ -13,7 +13,15 @@ public class Escola {
         this.alunolist = new ArrayList<>();
         this.salalist = new ArrayList<>();
     }
+    
+    public String getNome() {
+        return nome;
+    }
 
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public void adicionarAluno(String matricula, String nome){
         Aluno aluno_aux = new Aluno(matricula, nome);
@@ -44,4 +52,5 @@ public class Escola {
             salalist.add(sala_aux);
         }
     }
+   
 }

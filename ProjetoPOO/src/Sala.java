@@ -43,6 +43,13 @@ public class Sala {
         this.numeroDeTurmasAlocadas = numeroDeTurmasAlocadas;
     }
 
+
+    @Override
+    public String toString() {
+        return "Sala [numero=" + numero + ", capacidadedeSala=" + capacidadedeSala + ", numeroDeTurmasAlocadas="
+                + numeroDeTurmasAlocadas + "]";
+    }
+
     
 
     
