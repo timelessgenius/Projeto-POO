@@ -3,7 +3,7 @@
 ### [x] Implementar os métodos Getters e Setters para cada Classe
 ### [x] Implementar os métodos que estão nos diagramas de Classe
 ### [x] Tratar a excessão HoraFim > HoraInício 
-### [x] Criar os métodos ToString() para todas as Classes - Falta o toString() de Horario.
+### [x] Criar os métodos ToString() para todas as Classes 
 ### [ ] Implementar os métodos de Destruir um Objeto
 ### [ ] Implementar os métodos de remoção
 ### [ ] Validar a capacidade da sala caso um aluno se matricule em uma turma
