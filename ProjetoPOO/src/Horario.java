@@ -43,6 +43,12 @@ public class Horario {
             System.out.println("Dia da semana adicionado com sucesso!");
         }
     }
+    
+    @Override
+    public String toString() {
+        return "Horario [horaInicio=" + horaInicio + ", horaFim=" + horaFim + ", diaSemana=" + diaSemana
+                + ", diasDaSemana=" + diasDaSemana + "]";
+    }
    
     
     
