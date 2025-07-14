@@ -1,16 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sala {
     private int numero;
     private int capacidadedeSala;
     private int numeroDeTurmasAlocadas;
-    
-    
-    public Sala() {}
-
+    private List<Turma> turmalist;
 
     public Sala(int numero, int capacidadedeSala, int numeroDeTurmasAlocadas) {
         this.numero = numero;
-        this.capacidadedeSala = capacidadedeSala;
+        this.capacidadedeSala = capacidadedeSala;    
         this.numeroDeTurmasAlocadas = numeroDeTurmasAlocadas;
+        this.turmalist = new ArrayList<>();
     }
 
 
@@ -43,11 +44,18 @@ public class Sala {
         this.numeroDeTurmasAlocadas = numeroDeTurmasAlocadas;
     }
 
+    public void adicionarTurma(Turma t){
+        if(turmalist.contains(t)){
+            System.out.println("Esta sala já foi reservada para essa turma!");
+        }else{
+            turmalist.add(t);
+            System.out.println("Turma adicionada com sucesso!");
+        }
+    }
 
     @Override
     public String toString() {
-        return "Sala [numero=" + numero + ", capacidadedeSala=" + capacidadedeSala + ", numeroDeTurmasAlocadas="
-                + numeroDeTurmasAlocadas + "]";
+        return "Sala " + this.getNumero() + "\nCapacidade: " + this.getCapacidadedeSala() + "\nNúmero de Turmas Alocadas: " + this.getNumeroDeTurmasAlocadas();
     }
 
     

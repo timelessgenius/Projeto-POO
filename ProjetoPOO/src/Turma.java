@@ -38,6 +38,15 @@ public class Turma {
         this.numeroAlunos = numeroAlunos;
     }
 
+    public void adicionarAluno(Aluno a){
+        if(listaAlunos.contains(a)){
+            System.out.println("O aluno já está na turma");
+        }else{
+            listaAlunos.add(a);
+            System.out.println("Aluno adicionado com sucesso!");
+        }
+    }
+
     public void exibirAlunos(){
         if(!listaAlunos.isEmpty()){
             for(Aluno a : listaAlunos){
@@ -47,6 +56,13 @@ public class Turma {
             System.out.println("A lista está vazia!");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Turma" + "\nAno da turma: " + this.getAnoTurma() + "\nCurso: " + this.getCurso() + "\nNúmero de alunos: " + this.getNumeroAlunos() + "\nAlunos: " + listaAlunos.toString();
+    }
+
+    
     
 
     

@@ -1,10 +1,6 @@
 public class Aluno {
     private String matricula;
     private String nome;
-    
-    
-    public Aluno() {}
-
 
     public Aluno(String matricula, String nome) {
         this.matricula = matricula;

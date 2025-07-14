@@ -40,9 +40,11 @@ public class Horario {
             System.out.println("Essa chave já está no Map!");
         }else{
             diasDaSemana.put(dia, nome);
+            System.out.println("Dia da semana adicionado com sucesso!");
         }
     }
-
+   
+    
     
     
     
