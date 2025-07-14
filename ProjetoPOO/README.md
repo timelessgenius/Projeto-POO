@@ -10,6 +10,7 @@
 ### [ ] Verificar conflitos de horário envolvendo Horário - Turma
 ### [ ] Verificar conflitos de horário envolvendo Horário - Sala
 ### [ ] Caso um aluno seja removido da turma, atualizar a quantidade de alunos dela
+### [ ] Criar um ArrayList de turmas que o Professor pode lecionar na Classe Professor
 
 
 #### Observações: 
