@@ -6,6 +6,7 @@ public class Turma {
     private String curso;
     private int numeroAlunos;
     private List<Aluno> listaAlunos;
+    private List<Horario> horarios;
     
     public Turma(int anoTurma, String curso) {
         this.anoTurma = anoTurma;

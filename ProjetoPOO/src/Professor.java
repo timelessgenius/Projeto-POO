@@ -1,11 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Professor {
     private int numeroAulasMinistradas;
     private String nome;
     private String siape;
-    public Professor(int numeroAulasMinistradas, String nome, String siape) {
+    private List<Turma> turmas;
+
+    public Professor(int numeroAulasMinistradas, String nome, String siape, List<Turma> turmas) {
         this.numeroAulasMinistradas = numeroAulasMinistradas;
         this.nome = nome;
         this.siape = siape;
+        this.turmas = new ArrayList<>(turmas);
     }
 
     public int getNumeroAulasMinistradas() {
