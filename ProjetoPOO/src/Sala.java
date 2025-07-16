@@ -45,11 +45,15 @@ public class Sala {
     }
 
     public void adicionarTurma(Turma t){
-        if(turmalist.contains(t)){
-            System.out.println("Esta sala já foi reservada para essa turma!");
+        if(this.verificarCapacidade(t)){
+            if(turmalist.contains(t)){
+                System.out.println("Esta sala já foi reservada para essa turma!");
+            }else{
+                turmalist.add(t);
+                System.out.println("Turma adicionada com sucesso!");
+            }
         }else{
-            turmalist.add(t);
-            System.out.println("Turma adicionada com sucesso!");
+            System.out.println("O número de alunos da turma excede a capacidade da sala!");
         }
     }
 
@@ -58,7 +62,32 @@ public class Sala {
         return "Sala " + this.getNumero() + "\nCapacidade: " + this.getCapacidadedeSala() + "\nNúmero de Turmas Alocadas: " + this.getNumeroDeTurmasAlocadas();
     }
 
-    
+    public void removerTurmaNoFinal(){
+        if(turmalist.isEmpty()){
+            System.out.println("Não existe turma alocada para essa sala!");
+        }else{
+            turmalist.removeLast();
+            System.out.println("Turma removida com sucesso!");
+        }
+    }
 
-    
-}
+
+    public void removerTurma(int index){
+        if(turmalist.isEmpty()){
+            System.out.println("Não existe turma alocada para essa sala!");
+        }else{
+            for(Turma t : turmalist)
+                if(turmalist.indexOf(t) == index){
+                    turmalist.remove(index);
+                    System.out.println("Turma removida com sucesso!");
+                }
+            }
+        }
+        public boolean verificarCapacidade(Turma t){
+            if(t.getNumeroAlunos() <= this.getCapacidadedeSala()){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }

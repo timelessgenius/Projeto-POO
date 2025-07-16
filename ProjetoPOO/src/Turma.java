@@ -7,10 +7,10 @@ public class Turma {
     private int numeroAlunos;
     private List<Aluno> listaAlunos;
     
-    public Turma(int anoTurma, String curso, int numeroAlunos) {
+    public Turma(int anoTurma, String curso) {
         this.anoTurma = anoTurma;
         this.curso = curso;
-        this.numeroAlunos = numeroAlunos;
+        this.numeroAlunos = listaAlunos.size();
         this.listaAlunos = new ArrayList<>();
     }
 
@@ -60,6 +60,29 @@ public class Turma {
     @Override
     public String toString() {
         return "Turma" + "\nAno da turma: " + this.getAnoTurma() + "\nCurso: " + this.getCurso() + "\nNúmero de alunos: " + this.getNumeroAlunos() + "\nAlunos: " + listaAlunos.toString();
+    }
+
+    public void removerAlunoFinal(){
+        if(listaAlunos.isEmpty()){
+            System.out.println("Nào existe alunos nessa turma!");
+        }else{
+            listaAlunos.removeLast();
+            System.out.println("Aluno removido com sucesso!");
+        }
+    }
+
+    public void removerAluno(int index){
+        if(listaAlunos.isEmpty()){
+            System.out.println("Não existe alunos nessa turma!");
+        }else{
+            for(Aluno a : listaAlunos){
+                if(listaAlunos.indexOf(a) == index){
+                    listaAlunos.remove(index);
+                    System.out.println("Aluno removido com sucesso!");
+                    this.setNumeroAlunos(listaAlunos.size());
+                }
+            }
+        }
     }
 
     

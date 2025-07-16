@@ -2,10 +2,6 @@ public class Professor {
     private int numeroAulasMinistradas;
     private String nome;
     private String siape;
-    
-    
-    public Professor() {}
-
     public Professor(int numeroAulasMinistradas, String nome, String siape) {
         this.numeroAulasMinistradas = numeroAulasMinistradas;
         this.nome = nome;

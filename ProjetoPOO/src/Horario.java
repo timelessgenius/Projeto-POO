@@ -48,6 +48,19 @@ public class Horario {
     public String toString() {
         return "Horario: " + "\nInício: " + this.getHoraInicio() + "\nFim: " + this.getHoraFim() + "\nDias da semana: " + this.getDiaSemana() + "\nDia da semana: " + this.getDiaSemana() + "\n";
     }
+
+    public void removerDiadaSemana(int chave){
+        if(diasDaSemana.isEmpty()){
+            System.out.println("Não há dias alocados para esse horário!");
+        }else{
+            if(diasDaSemana.containsKey(chave)){
+                diasDaSemana.remove(chave);
+                System.out.println("Dia removido!");
+            }else{
+                System.out.println("Chave inválida!");
+            }
+        }
+    }
    
     
     
