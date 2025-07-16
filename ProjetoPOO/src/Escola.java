@@ -5,7 +5,7 @@ public class Escola {
     private String nome;
     private List<Professor> professorlist;
     private List<Turma> turmalist;
-    private List<Aluno> alunolist;
+    private List<Aluno> alunolist; // Dúvida: Aqui poderia ser uma lista de lista de alunos?? usando a notação List<List<Aluno>> alunolist
     private List<Sala> salalist;
 
     public Escola(String nome) {
@@ -64,6 +64,79 @@ public class Escola {
             System.out.println("Turma adicionada com sucesso!");
         }
     }
+
+
+    // [Estou em dúvida se essas funções estão sendo redundantes ou não]
+    public void removerTurmaFinal(){
+        if(turmalist.isEmpty()){
+            System.out.println("Não há turmas nessa escola!");
+        }else{
+            turmalist.removeLast();
+            System.out.println("Turma removida com sucesso!");
+        }
+    }
+
+    public void removerTurma(int index){
+        if(turmalist.isEmpty()){
+            System.out.println("Não há turmas nessa escola!");
+        }else{
+            for(Turma t : turmalist){
+                if(turmalist.indexOf(t) == index){
+                    turmalist.remove(index);
+                    System.out.println("A turma foi removida com sucesso!");
+                }
+            }
+        }
+    }
+
+
+    public void removerProfessorFinal(){
+        if(professorlist.isEmpty()){
+            System.out.println("Não há professor nessa escola!");
+        }else{
+            professorlist.removeLast();
+            System.out.println("Professor removido com sucesso!");
+        }
+    }
+
+    public void removerProfessor(int index){
+        if(professorlist.isEmpty()){
+            System.out.println("Não há professor nessa escola!");
+        }else{
+            for(Professor p : professorlist){
+                if(professorlist.indexOf(p) == index){
+                    professorlist.remove(index);
+                    System.out.println("Professor removido com sucesso!");
+                }
+            }
+        }
+    }
+
+
+
+    public void removerSalaFinal(){
+        if(salalist.isEmpty()){
+            System.out.println("Não foram alocadas salas para essa escola!");
+        }else{
+            salalist.removeLast();
+            System.out.println("Sala removida com sucesso!");
+        }
+    }
+
+    public void removerSala(int index){
+        if(salalist.isEmpty()){
+            System.out.println("Não foram alocadas salas para essa escola!");
+        }else{
+            for(Sala s : salalist){
+                if(salalist.indexOf(s) == index){
+                    salalist.remove(index);
+                    System.out.println("Sala removida com sucesso!");
+                }
+            }
+        }
+    }
+
+    // [Falta a parte de remover os alunos da lista alunolist]
 
 
     @Override
