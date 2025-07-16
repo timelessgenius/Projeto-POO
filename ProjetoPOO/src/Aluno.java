@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Aluno {
     private String matricula;
     private String nome;
-    private ArrayList turmas;
+    private ArrayList<Turma> turmas;
 
     public Aluno(String matricula, String nome) {
         this.matricula = matricula;
