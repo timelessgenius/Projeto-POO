@@ -46,8 +46,7 @@ public class Horario {
     
     @Override
     public String toString() {
-        return "Horario [horaInicio=" + horaInicio + ", horaFim=" + horaFim + ", diaSemana=" + diaSemana
-                + ", diasDaSemana=" + diasDaSemana + "]";
+        return "Horario: " + "\nInício: " + this.getHoraInicio() + "\nFim: " + this.getHoraFim() + "\nDias da semana: " + this.getDiaSemana() + "\nDia da semana: " + this.getDiaSemana() + "\n";
     }
    
     
