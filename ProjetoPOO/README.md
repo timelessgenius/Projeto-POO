@@ -5,7 +5,7 @@
 ### [x] Tratar a excessão HoraFim > HoraInício 
 ### [x] Criar os métodos ToString() para todas as Classes 
 ### [ ] Implementar os métodos de Destruir um Objeto
-### [x] Implementar os métodos de remoção
+### [...] Implementar os métodos de remoção -> Ainda falta o método de alunos, onde tive dúvidas em relação cmo redundância ou outra forma de implementar ~ Paraba
 ### [...] Validar a capacidade da sala caso um aluno se matricule em uma turma -> Falta validar quando eu adiciono um aluno na turma para ver se a sala ainda comporta a turma em questão.
 ### [ ] Verificar conflitos de horário envolvendo Horário - Turma
 ### [ ] Verificar conflitos de horário envolvendo Horário - Sala
