@@ -50,7 +50,7 @@ public class Aluno {
     public void removerTurma(Turma turma) {
         if(turmas.contains(turma)) {
             turmas.remove(turma);
-            turma.removerAluno();
+            turma.removerAluno(this);
             System.out.println("Aluno removido da turma: " + turma.getCurso());
         } else {
             System.out.println("Aluno não está matriculado nesta turma.");

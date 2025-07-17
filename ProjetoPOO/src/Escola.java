@@ -67,35 +67,25 @@ public class Escola {
 
 
     // [Estou em dúvida se essas funções estão sendo redundantes ou não]
-    public void removerTurmaFinal(){
-        if(turmalist.isEmpty()){
-            System.out.println("Não há turmas nessa escola!");
-        }else{
-            turmalist.removeLast();
-            System.out.println("Turma removida com sucesso!");
-        }
-    }
 
     public void removerTurma(int index){
         if(turmalist.isEmpty()){
             System.out.println("Não há turmas nessa escola!");
         }else{
-            for(Turma t : turmalist){
-                if(turmalist.indexOf(t) == index){
-                    turmalist.remove(index);
-                    System.out.println("A turma foi removida com sucesso!");
+            if(index == turmalist.size()-1){ // Remoção no final 
+                turmalist.removeLast();
+                System.out.println("A turma foi removida com sucesso!");
+            }else if(index == 0){ // Remoção no inicio 
+                turmalist.removeFirst();
+                System.out.println("A turma foi removida com sucesso!");
+            }else{ // Remoção no meio 
+                for(Turma t : turmalist){ 
+                    if(turmalist.indexOf(t) == index){
+                        turmalist.remove(index);
+                        System.out.println("A turma foi removida com sucesso!");
+                    }
                 }
             }
-        }
-    }
-
-
-    public void removerProfessorFinal(){
-        if(professorlist.isEmpty()){
-            System.out.println("Não há professor nessa escola!");
-        }else{
-            professorlist.removeLast();
-            System.out.println("Professor removido com sucesso!");
         }
     }
 
@@ -103,34 +93,40 @@ public class Escola {
         if(professorlist.isEmpty()){
             System.out.println("Não há professor nessa escola!");
         }else{
-            for(Professor p : professorlist){
-                if(professorlist.indexOf(p) == index){
-                    professorlist.remove(index);
-                    System.out.println("Professor removido com sucesso!");
+            if(index == professorlist.size()-1){ // Remoção no final
+                professorlist.removeLast();
+                System.out.println("Professor removido com sucesso!");    
+            }else if(index == 0){  // Remoção no inicio
+                professorlist.removeFirst();
+                System.out.println("Professor removido com sucesso!");
+            }else{ // Remoção no meio
+                for(Professor p : professorlist){
+                    if(professorlist.indexOf(p) == index){
+                        professorlist.remove(index);
+                        System.out.println("Professor removido com sucesso!");
+                    }
                 }
             }
         }
     }
 
 
-
-    public void removerSalaFinal(){
-        if(salalist.isEmpty()){
-            System.out.println("Não foram alocadas salas para essa escola!");
-        }else{
-            salalist.removeLast();
-            System.out.println("Sala removida com sucesso!");
-        }
-    }
-
     public void removerSala(int index){
         if(salalist.isEmpty()){
             System.out.println("Não foram alocadas salas para essa escola!");
         }else{
-            for(Sala s : salalist){
-                if(salalist.indexOf(s) == index){
-                    salalist.remove(index);
-                    System.out.println("Sala removida com sucesso!");
+            if(index == salalist.size()-1){ // Remoção no final
+                salalist.removeLast();
+                System.out.println("Sala removida com sucesso!");
+            }else if(index == 0){ // Remoção no inicio
+                salalist.removeFirst();
+                System.out.println("Sala removida com sucesso!");
+            }else{ // Remoção no meio
+                for(Sala s : salalist){
+                    if(salalist.indexOf(s) == index){
+                        salalist.remove(index);
+                        System.out.println("Sala removida com sucesso!");
+                    }
                 }
             }
         }

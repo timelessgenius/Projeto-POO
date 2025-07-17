@@ -38,9 +38,15 @@ public class Professor {
         this.siape = siape;
     }
 
+    
+
     @Override
     public String toString() {
-        return "Professor:\n" + "Nome: " + this.getNome() + "\nQuantidade de aulas ministradas: " + this.getNumeroAulasMinistradas() + "\nSIAPE: " + this.getSiape() + "\n";
+        return "Professor:\n" + "Nome: " + this.getNome() + "\nQuantidade de aulas ministradas: " + this.getNumeroAulasMinistradas() + "\nSIAPE: " + this.getSiape() + "\nTurmas: " + this.getTurmas();
+    }
+
+    public List<Turma> getTurmas() {
+        return turmas;
     }
 
     

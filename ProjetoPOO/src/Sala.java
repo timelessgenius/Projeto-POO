@@ -71,7 +71,7 @@ public class Sala {
         }
     }
 
-
+    // Remoção por index/posição
     public void removerTurma(int index){
         if(turmalist.isEmpty()){
             System.out.println("Não existe turma alocada para essa sala!");
@@ -83,11 +83,24 @@ public class Sala {
                 }
             }
         }
-        public boolean verificarCapacidade(Turma t){
-            if(t.getNumeroAlunos() <= this.getCapacidadedeSala()){
-                return true;
-            }else{
-                return false;
+
+    // Remoção por objeto
+    public void removerTurma(Turma t){
+        if(turmalist.isEmpty()){
+            System.out.println("Não há turmas alocadas nessa Sala");
+        }else{
+            if(turmalist.contains(t)){  
+                turmalist.remove(t);
+                System.out.println("Turma removida com sucesso!");
             }
         }
     }
+
+    public boolean verificarCapacidade(Turma t){
+        if(t.getNumeroAlunos() <= this.getCapacidadedeSala()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}

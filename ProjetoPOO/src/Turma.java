@@ -60,34 +60,53 @@ public class Turma {
 
     @Override
     public String toString() {
-        return "Turma" + "\nAno da turma: " + this.getAnoTurma() + "\nCurso: " + this.getCurso() + "\nNúmero de alunos: " + this.getNumeroAlunos() + "\nAlunos: " + listaAlunos.toString();
+        return "Turma" + "\nAno da turma: " + this.getAnoTurma() + "\nCurso: " + this.getCurso() + "\nNúmero de alunos: " + this.getNumeroAlunos() + "\nAlunos: " + listaAlunos.toString() + "\nHorários: " + horarios.toString();
     }
 
-    public void removerAlunoFinal(){
-        if(listaAlunos.isEmpty()){
-            System.out.println("Nào existe alunos nessa turma!");
-        }else{
-            listaAlunos.removeLast();
-            System.out.println("Aluno removido com sucesso!");
-        }
-    }
-
+    // Remoção por index
     public void removerAluno(int index){
         if(listaAlunos.isEmpty()){
             System.out.println("Não existe alunos nessa turma!");
         }else{
-            for(Aluno a : listaAlunos){
-                if(listaAlunos.indexOf(a) == index){
-                    listaAlunos.remove(index);
-                    System.out.println("Aluno removido com sucesso!");
-                    this.setNumeroAlunos(listaAlunos.size());
+            if(index == listaAlunos.size()-1){ // Remoção no final
+                listaAlunos.removeLast();
+                System.out.println("Aluno removido com sucesso!");
+            }else if(index == 0){ // Remoção no inicio
+                listaAlunos.removeFirst();
+                System.out.println("Aluno removido com sucesso!");
+            }else{ // Remoção no meio
+                for(Aluno a : listaAlunos){
+                    if(listaAlunos.indexOf(a) == index){
+                        listaAlunos.remove(index);
+                        System.out.println("Aluno removido com sucesso!");
+                        this.setNumeroAlunos(listaAlunos.size());
+                    }
                 }
             }
         }
     }
 
-    
-    
+    // Remoção através do objeto Aluno
+    public void removerAluno(Aluno a){
+        if(listaAlunos.isEmpty()){
+            System.out.println("Não há alunos nessa turma!");
+        }else{
+            if(listaAlunos.contains(a)){
+                listaAlunos.remove(a);
+                System.out.println("Aluno removido com sucesso!");
+            }
+        }
+    }
+
+    // Método para limpar a lista de alunos
+    public void removerTodosAlunos(){
+        if(listaAlunos.isEmpty()){
+            System.out.println("Não há alunos nessa turma!");
+        }else{
+            listaAlunos.clear();
+            System.out.println("Todos os alunos foram removidos!");
+        }
+    }
 
     
 }
