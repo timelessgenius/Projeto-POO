@@ -5,12 +5,12 @@
 ### [x] Tratar a excessão HoraFim > HoraInício 
 ### [x] Criar os métodos ToString() para todas as Classes 
 ### [ ] Implementar os métodos de Destruir um Objeto
-### [...] Implementar os métodos de remoção -> Ainda falta o método de alunos, onde tive dúvidas em relação cmo redundância ou outra forma de implementar ~ Paraba
-### [...] Validar a capacidade da sala caso um aluno se matricule em uma turma -> Falta validar quando eu adiciono um aluno na turma para ver se a sala ainda comporta a turma em questão.
+### [x] Implementar os métodos de remoção 
+### [x] Validar a capacidade da sala caso um aluno se matricule em uma turma -> Falta validar quando eu adiciono um aluno na turma para ver se a sala ainda comporta a turma em questão.
 ### [ ] Verificar conflitos de horário envolvendo Horário - Turma
 ### [ ] Verificar conflitos de horário envolvendo Horário - Sala
 ### [x] Caso um aluno seja removido da turma, atualizar a quantidade de alunos dela
-### [ ] Criar um ArrayList de turmas que o Professor pode lecionar na Classe Professor
+### [x] Criar um ArrayList de turmas que o Professor pode lecionar na Classe Professor
 ### [ ] Criar um arraylist de horario dentro de Turma para validar horarios de cada turma
 
 
@@ -30,13 +30,13 @@
 ### [x] Metodos de validação para a capacidade e numero da sala
 
 ### TURMA
-### [ ]Atributo para armazenar a lista de alunos
-### [ ]Atributo para armazenar a lista de horarios
-### [ ]Metodos de validação para a capacidade da sala e horario da turma
-### [ ]Adicionar e remover alunos
-### [ ]Adicionar e remover horarios
+### [x]Atributo para armazenar a lista de alunos
+### [x]Atributo para armazenar a lista de horarios
+### [...]Metodos de validação para a capacidade da sala e horario da turma -> falta verificar conflito de horario (a função de comparaçao de capacidade da sala está no Sala.java)
+### [x]Adicionar e remover alunos
+### [x]Adicionar e remover horarios
 ### [ ]Verificar conflitos de horarios
-### [ ]Exibir informação da turma e lista de alunos
+### [x]Exibir informação da turma e lista de alunos
 
 
 

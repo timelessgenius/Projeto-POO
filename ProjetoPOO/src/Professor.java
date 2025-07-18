@@ -7,11 +7,11 @@ public class Professor {
     private String siape;
     private List<Turma> turmas;
 
-    public Professor(int numeroAulasMinistradas, String nome, String siape, List<Turma> turmas) {
+    public Professor(int numeroAulasMinistradas, String nome, String siape) {
         this.numeroAulasMinistradas = numeroAulasMinistradas;
         this.nome = nome;
         this.siape = siape;
-        this.turmas = new ArrayList<>(turmas);
+        this.turmas = new ArrayList<>();
     }
 
     public int getNumeroAulasMinistradas() {
@@ -38,18 +38,25 @@ public class Professor {
         this.siape = siape;
     }
 
-    
-
-    @Override
-    public String toString() {
-        return "Professor:\n" + "Nome: " + this.getNome() + "\nQuantidade de aulas ministradas: " + this.getNumeroAulasMinistradas() + "\nSIAPE: " + this.getSiape() + "\nTurmas: " + this.getTurmas();
-    }
-
     public List<Turma> getTurmas() {
         return turmas;
     }
 
+    @Override
+    public String toString() {
+        return "Professor:\n" + "Nome: " + this.getNome() + "\nQuantidade de aulas ministradas: "
+                + this.getNumeroAulasMinistradas() + "\nSIAPE: " + this.getSiape() + "\nTurmas: " + this.getTurmas();
+    }
+
+    public void adicionarTurma(Turma t) {
+        if (turmas.contains(t)) {
+            System.out.println("Esta sala já foi reservada para essa turma!");
+        } else {
+            turmas.add(t);
+            System.out.println("Turma adicionada com sucesso!");
+        }
+    }
+
     
-    
-    
+
 }

@@ -11,34 +11,30 @@ public class Aluno {
         this.turmas = new ArrayList<>();
     }
 
-
     public String getMatricula() {
         return matricula;
     }
 
-
     public void setMatricula(String matricula) {
-        if(matricula == null || matricula.isEmpty()) {
+        if (matricula == null || matricula.isEmpty()) {
             throw new IllegalArgumentException("Matrícula não pode ser vazia");
         }
         this.matricula = matricula;
     }
 
-
     public String getNome() {
         return nome;
     }
 
-
     public void setNome(String nome) {
-        if(nome == null || nome.isEmpty()) {
+        if (nome == null || nome.isEmpty()) {
             throw new IllegalArgumentException("Nome não pode ser vazio");
         }
         this.nome = nome;
     }
 
     public void MatricularTurma(Turma turma) {
-        if(turmas.contains(turma)) {
+        if (turmas.contains(turma)) {
             System.out.println("Aluno já está matriculado nesta turma.");
         } else {
             turmas.add(turma);
@@ -48,7 +44,7 @@ public class Aluno {
     }
 
     public void removerTurma(Turma turma) {
-        if(turmas.contains(turma)) {
+        if (turmas.contains(turma)) {
             turmas.remove(turma);
             turma.removerAluno(this);
             System.out.println("Aluno removido da turma: " + turma.getCurso());
@@ -58,22 +54,19 @@ public class Aluno {
     }
 
     public void ListarTurmas() {
-        if(turmas.isEmpty()) {
+        if (turmas.isEmpty()) {
             System.out.println("Aluno não está matriculado em nenhuma turma.");
         } else {
             System.out.println("Turmas do Aluno " + this.nome + ":");
-            for(Object turma : turmas) {
+            for (Object turma : turmas) {
                 System.out.println(turma);
             }
         }
     }
-
 
     @Override
     public String toString() {
         return "Aluno:\n" + "Matrícula: " + this.getMatricula() + "\nNome: " + this.getNome() + "\n";
     }
 
-    
-    
 }
