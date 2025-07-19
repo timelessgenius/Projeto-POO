@@ -98,4 +98,21 @@ public class Sala {
             return false;
         }
     }
+
+
+
+    // Metodo para verificar conflito de horario com as turmas alocadas
+    public boolean verificarConflitoHorario(Turma novaTurma) {
+        for (Turma turma : turmalist) {
+            for (Horario h : turma.getHorarios()) {
+                for (Horario novoh : novaTurma.getHorarios()) {
+                    if (h.ConflitoHorario(novoh)) {
+                        return true; 
+                    }
+                }
+
+            }
+        }
+        return false; 
+    }
 }

@@ -69,4 +69,8 @@ public class Horario {
         }
     }
 
+    public boolean ConflitoHorario(Horario outroHorario) {
+        return (this.horaInicio < outroHorario.getHoraFim() && this.horaFim > outroHorario.getHoraInicio());
+    }
+
 }

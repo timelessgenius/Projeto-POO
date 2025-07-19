@@ -13,8 +13,12 @@ public class Turma {
         this.curso = curso;
         this.numeroAlunos = listaAlunos.size();
         this.listaAlunos = new ArrayList<>();
+        this.horarios = new ArrayList<>();
     }
 
+    public List<Horario> getHorarios() {
+        return horarios;
+    }
     public int getAnoTurma() {
         return anoTurma;
     }
@@ -115,12 +119,17 @@ public class Turma {
     }
 
     public void adicionarHorario(Horario h) {
-        if (horarios.contains(h)) {
+        for(Horario horarioExistente: horarios){
+            if (horarioExistente.ConflitoHorario(h)) {
+                System.out.println("Conflito de horário! Horário não adicionado.");
+                return;
+            }else if (horarios.contains(h)) {
             System.out.println("Esse horário já foi adicionado nessa turma!");
         } else {
             horarios.add(h);
             System.out.println("Horário adicionado com sucesso!");
         }
+    }
 
     }
 
@@ -144,6 +153,8 @@ public class Turma {
             }
         }
     }
+
+
 
     public void removerHorario(Horario h) {
         if (horarios.isEmpty()) {
