@@ -188,6 +188,28 @@ public class Escola {
         }
     }
 
+    public void destruirEscola(){
+        this.nome = null;
+        if (professorlist.isEmpty()) {
+            System.out.println("Não tem professores nesta escola");
+        }
+        else {
+            professorlist.clear();
+        }
+        if (alunolist.isEmpty()) {
+            System.out.println("Não tem alunos nesta escola");
+        }
+        else {
+            alunolist.clear();
+        }
+        if (salalist.isEmpty()) {
+            System.out.println("Não tem salas nesta escola");
+        }
+        else {
+            salalist.clear();
+        }
+    }
+
 
     @Override
     public String toString() {

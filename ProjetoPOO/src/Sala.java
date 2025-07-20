@@ -115,4 +115,13 @@ public class Sala {
         }
         return false; 
     }
+
+    public void destruirSala(){
+        if (turmalist.isEmpty()) {
+            System.out.println("Não há turmas nesta sala");
+        }
+        else {
+            turmalist.clear();
+        }
+    }
 }

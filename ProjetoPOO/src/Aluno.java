@@ -64,6 +64,18 @@ public class Aluno {
         }
     }
 
+    public void destruirAluno(){
+        this.matricula = null;
+        this.nome = null;
+
+        if (turmas.isEmpty()) {
+            System.out.println("Este aluno não está em nenhuma turma");
+        }
+        else {
+            turmas.clear();
+        }
+    }
+
     @Override
     public String toString() {
         return "Aluno:\n" + "Matrícula: " + this.getMatricula() + "\nNome: " + this.getNome() + "\n";

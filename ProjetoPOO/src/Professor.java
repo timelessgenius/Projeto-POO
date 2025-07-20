@@ -57,6 +57,16 @@ public class Professor {
         }
     }
 
-    
+    public void destruirProfessor(){
+        this.nome = null;
+        this.siape = null;
+
+        if (turmas.isEmpty()) {
+            System.out.println("O professor não dá aula em nenhuma turma");
+        }
+        else {
+            turmas.clear();
+        }
+    }
 
 }

@@ -169,4 +169,20 @@ public class Turma {
         }
     }
 
+    public void destruirTurma(){                    //Devido às variáveis do tipo inteiro, não consigo fazê-las receber um tipo null, portanto, optei por não colocá-las no método, assim como em algumas outras classes 
+        this.curso = null;
+        if (listaAlunos.isEmpty()) {
+            System.out.println("Não tem alunos nesta turma");
+        }
+        else {
+            listaAlunos.clear();
+        }
+
+        if (horarios.isEmpty()) {
+            System.out.println("Não tem horários para esta turma");
+        }
+        else {
+            horarios.clear();
+        }
+    }
 }

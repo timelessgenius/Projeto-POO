@@ -4,7 +4,7 @@
 ### [x] Implementar os métodos que estão nos diagramas de Classe
 ### [x] Tratar a excessão HoraFim > HoraInício 
 ### [x] Criar os métodos ToString() para todas as Classes 
-### [ ] Implementar os métodos de Destruir um Objeto
+### [x] Implementar os métodos de Destruir um Objeto
 ### [x] Implementar os métodos de remoção 
 ### [x] Validar a capacidade da sala caso um aluno se matricule em uma turma -> Falta validar quando eu adiciono um aluno na turma para ver se a sala ainda comporta a turma em questão.
 ### [x] Verificar conflitos de horário envolvendo Horário - Turma

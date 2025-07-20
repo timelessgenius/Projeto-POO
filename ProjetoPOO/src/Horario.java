@@ -73,4 +73,12 @@ public class Horario {
         return (this.horaInicio < outroHorario.getHoraFim() && this.horaFim > outroHorario.getHoraInicio());
     }
 
+    public void destruirHorario(){
+        if (diasDaSemana.isEmpty()) {
+            System.out.println("Não há dias da semana registrados");
+        }
+        else {
+            diasDaSemana.clear();
+        }
+    }
 }
