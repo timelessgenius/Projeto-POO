@@ -36,12 +36,16 @@ public class Escola {
 
     public void adicionarAluno(Turma t){
         List<Aluno> a_aux = t.getAlunoList();
-        for(Aluno a : a_aux ){
-            if(alunolist.contains(a)){
-                System.out.println("O aluno já está nessa lista!");
-            }else{
-                alunolist.add(a);
-                System.out.println("Aluno adicionado na lista de Todos os alunos da Escola!");
+        if(a_aux.isEmpty()){
+            System.out.println("Turma vazia, por isso não foi possível fazer a operação de adicionar alunos.");
+        }else{
+            for(Aluno a : a_aux ){
+                if(alunolist.contains(a)){
+                    System.out.println("O aluno já está nessa lista!");
+                }else{
+                    alunolist.add(a);
+                    System.out.println("Aluno adicionado na lista de Todos os alunos da Escola!");
+                }
             }
         }
     }

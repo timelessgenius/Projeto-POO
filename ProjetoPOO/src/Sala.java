@@ -7,10 +7,10 @@ public class Sala {
     private int numeroDeTurmasAlocadas;
     private List<Turma> turmalist;
 
-    public Sala(int numero, int capacidadedeSala, int numeroDeTurmasAlocadas) {
+    public Sala(int numero, int capacidadedeSala) {
         this.numero = numero;
         this.capacidadedeSala = capacidadedeSala;
-        this.numeroDeTurmasAlocadas = numeroDeTurmasAlocadas;
+        this.numeroDeTurmasAlocadas = 0;
         this.turmalist = new ArrayList<>();
     }
 
@@ -44,6 +44,7 @@ public class Sala {
                 System.out.println("Esta sala já foi reservada para essa turma!");
             } else {
                 turmalist.add(t);
+                this.setNumeroDeTurmasAlocadas(turmalist.size());
                 System.out.println("Turma adicionada com sucesso!");
             }
         } else {
@@ -62,6 +63,7 @@ public class Sala {
             System.out.println("Não existe turma alocada para essa sala!");
         } else {
             turmalist.removeLast();
+            this.setNumeroDeTurmasAlocadas(turmalist.size());
             System.out.println("Turma removida com sucesso!");
         }
     }
@@ -74,6 +76,7 @@ public class Sala {
             for (Turma t : turmalist)
                 if (turmalist.indexOf(t) == index) {
                     turmalist.remove(index);
+                    this.setNumeroDeTurmasAlocadas(turmalist.size());
                     System.out.println("Turma removida com sucesso!");
                 }
         }
@@ -86,6 +89,7 @@ public class Sala {
         } else {
             if (turmalist.contains(t)) {
                 turmalist.remove(t);
+                this.setNumeroDeTurmasAlocadas(turmalist.size());
                 System.out.println("Turma removida com sucesso!");
             }
         }

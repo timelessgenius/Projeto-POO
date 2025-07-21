@@ -60,7 +60,7 @@ public class Professor {
     public void destruirProfessor(){
         this.nome = null;
         this.siape = null;
-
+        this.numeroAulasMinistradas = -1; // Assumi -1 como um valor para exemplificar o 'null' ~ Matheus
         if (turmas.isEmpty()) {
             System.out.println("O professor não dá aula em nenhuma turma");
         }
