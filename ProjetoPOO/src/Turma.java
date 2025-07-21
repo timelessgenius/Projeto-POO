@@ -30,6 +30,9 @@ public class Turma {
     public String getCurso() {
         return curso;
     }
+    public List<Aluno> getAlunoList(){
+        return listaAlunos;
+    }
 
     public void setCurso(String curso) {
         this.curso = curso;

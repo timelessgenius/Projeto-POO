@@ -4,7 +4,7 @@ import java.util.List;
 public class Escola {
     private String nome;
     private List<Professor> professorlist;
-    private List<Aluno> alunolist; // Dúvida: Aqui poderia ser uma lista de lista de alunos?? usando a notação List<List<Aluno>> alunolist
+    private List<Aluno> alunolist;
     private List<Sala> salalist;
 
     public Escola(String nome) {
@@ -34,6 +34,18 @@ public class Escola {
         }
     }
 
+    public void adicionarAluno(Turma t){
+        List<Aluno> a_aux = t.getAlunoList();
+        for(Aluno a : a_aux ){
+            if(alunolist.contains(a)){
+                System.out.println("O aluno já está nessa lista!");
+            }else{
+                alunolist.add(a);
+                System.out.println("Aluno adicionado na lista de Todos os alunos da Escola!");
+            }
+        }
+    }
+
     public void adicionarProfessor(Professor p){
         if(professorlist.contains(p)){
             System.out.println("O professor já existe no banco de dados");
@@ -54,39 +66,7 @@ public class Escola {
         }
     }
 
-    // public void adicionarTurma(Turma t){
-    //     if(turmalist.contains(t)){
-    //         System.out.println("Esta sala já foi reservada para essa turma!");
-    //     }else{
-    //         turmalist.add(t);
-    //         System.out.println("Turma adicionada com sucesso!");
-    //     }
-    // }
-
-
-    // [Estou em dúvida se essas funções estão sendo redundantes ou não]
-
-    // public void removerTurma(int index){  
-    //     if(turmalist.isEmpty()){
-    //         System.out.println("Não há turmas nessa escola!");
-    //     }else{
-    //         if(index == turmalist.size()-1){ // Remoção no final 
-    //             turmalist.removeLast();
-    //             System.out.println("A turma foi removida com sucesso!");
-    //         }else if(index == 0){ // Remoção no inicio 
-    //             turmalist.removeFirst();
-    //             System.out.println("A turma foi removida com sucesso!");
-    //         }else{ // Remoção no meio 
-    //             for(Turma t : turmalist){ 
-    //                 if(turmalist.indexOf(t) == index){
-    //                     turmalist.remove(index);
-    //                     System.out.println("A turma foi removida com sucesso!");
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-
+   
     public void removerProfessor(int index){
         if(professorlist.isEmpty()){
             System.out.println("Não há professor nessa escola!");

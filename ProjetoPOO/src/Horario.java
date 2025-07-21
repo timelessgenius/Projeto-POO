@@ -74,6 +74,8 @@ public class Horario {
     }
 
     public void destruirHorario(){
+        this.diaSemana = this.horaFim = this.horaInicio = -1; // O -1 faz o papel de algo inexistente no programa, onde não podemos ter dias e horas negativos. Portanto achei válido colocar um valor que servisse como exemplo do atributo 'null' ~ Matheus
+        
         if (diasDaSemana.isEmpty()) {
             System.out.println("Não há dias da semana registrados");
         }

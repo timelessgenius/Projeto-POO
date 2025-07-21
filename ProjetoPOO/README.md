@@ -11,7 +11,7 @@
 ### [x] Verificar conflitos de horário envolvendo Horário - Sala
 ### [x] Caso um aluno seja removido da turma, atualizar a quantidade de alunos dela
 ### [x] Criar um ArrayList de turmas que o Professor pode lecionar na Classe Professor
-### [ ] Criar um arraylist de horario dentro de Turma para validar horarios de cada turma
+### [x] Criar um arraylist de horario dentro de Turma para validar horarios de cada turma
 
 
 
@@ -32,10 +32,10 @@
 ### TURMA
 ### [x]Atributo para armazenar a lista de alunos
 ### [x]Atributo para armazenar a lista de horarios
-### [...]Metodos de validação para a capacidade da sala e horario da turma -> falta verificar conflito de horario (a função de comparaçao de capacidade da sala está no Sala.java)
+### [x]Metodos de validação para a capacidade da sala e horario da turma -> falta verificar conflito de horario (a função de comparaçao de capacidade da sala está no Sala.java)
 ### [x]Adicionar e remover alunos
 ### [x]Adicionar e remover horarios
-### [ ]Verificar conflitos de horarios
+### [x]Verificar conflitos de horarios
 ### [x]Exibir informação da turma e lista de alunos
 
 
