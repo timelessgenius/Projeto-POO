@@ -11,6 +11,12 @@ public class Aluno {
         this.turmas = new ArrayList<>();
     }
 
+    public String getMaStringtricula() {
+        return matricula;
+    }
+    public String getnomStringe() {
+        return nome;
+    }
     public String getMatricula() {
         return matricula;
     }

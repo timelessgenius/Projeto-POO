@@ -50,7 +50,7 @@ public class Professor {
 
     public void adicionarTurma(Turma t) {
         if (turmas.contains(t)) {
-            System.out.println("Esta sala já foi reservada para essa turma!");
+            System.out.println("Este professor já esta associado a esta turma!");
         } else {
             turmas.add(t);
             System.out.println("Turma adicionada com sucesso!");

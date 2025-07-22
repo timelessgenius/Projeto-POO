@@ -11,8 +11,8 @@ public class Turma {
     public Turma(int anoTurma, String curso) {
         this.anoTurma = anoTurma;
         this.curso = curso;
-        this.numeroAlunos = listaAlunos.size();
         this.listaAlunos = new ArrayList<>();
+        this.numeroAlunos = listaAlunos.size();
         this.horarios = new ArrayList<>();
     }
 
@@ -122,18 +122,22 @@ public class Turma {
     }
 
     public void adicionarHorario(Horario h) {
-        for(Horario horarioExistente: horarios){
+       //verificar se o horario existe e se não há conflito com os horários já existentes
+        if (horarios.contains(h)) {
+            System.out.println("Esse horário já foi adicionado nessa turma!");
+            return;
+        }
+       
+        for (Horario horarioExistente : horarios) {
             if (horarioExistente.ConflitoHorario(h)) {
                 System.out.println("Conflito de horário! Horário não adicionado.");
                 return;
-            }else if (horarios.contains(h)) {
-            System.out.println("Esse horário já foi adicionado nessa turma!");
-        } else {
-            horarios.add(h);
-            System.out.println("Horário adicionado com sucesso!");
+            }
         }
-    }
-
+        
+        
+        horarios.add(h);
+        System.out.println("Horário adicionado com sucesso!");
     }
 
     public void removerHorario(int index) {
